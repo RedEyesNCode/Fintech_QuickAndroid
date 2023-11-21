@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.FragmentKycStepOne">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edtFirstName"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:inputType="textAutoCorrect"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:inputType="textAutoCorrect"
+                android:id="@+id/edtMidName"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Of Birth"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edtDateOfBirth"
+
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:focusable="false"
+                android:inputType="textEmailAddress"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/edtEmail"
+
+                android:inputType="textEmailAddress"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:id="@+id/edtGender"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:focusable="false"
+                android:inputType="number"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Occupation"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edtOccupation"
+                android:focusable="false"
+
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pincode(Current Address)"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edtPincode"
+
+                android:padding="10dp"
+                android:inputType="number"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monthly Salary/Income"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/edtSalary"
+
+                android:inputType="number"
+                android:maxLength="10"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relative Name"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:inputType="textAutoCorrect"
+                android:id="@+id/edtRelativeName"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relative Mobile Number"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edRelativeNumber"
+
+                android:padding="10dp"
+                android:maxLength="10"
+                android:inputType="number"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Address"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/edtCurrentAddress"
+
+                android:inputType="textAutoCorrect"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Permanent Address"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editbackground"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:id="@+id/edtPermanentAddress"
+                android:inputType="textAutoCorrect"
+                android:layout_marginBottom="10dp"
+                />
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update KYC Request"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

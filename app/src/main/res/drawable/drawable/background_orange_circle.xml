@@ -1,0 +1,25 @@
+<!-- circle_drawable.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White outer circle with grey border -->
+    <item>
+        <shape
+            android:shape="oval">
+            <solid android:color="@color/white" /> <!-- White color for the outer circle -->
+            <stroke
+                android:width="@dimen/_1sdp"
+            android:color="#BABAB7" />
+        </shape>
+    </item>
+
+    <!-- Light orange inner circle -->
+    <item
+        android:left="@dimen/_4sdp"
+    android:right="@dimen/_4sdp"
+    android:top="@dimen/_4sdp"
+    android:bottom="@dimen/_4sdp">
+    <shape
+        android:shape="oval">
+        <solid android:color="#FDF6EA" />
+    </shape>
+</item>
+    </layer-list>

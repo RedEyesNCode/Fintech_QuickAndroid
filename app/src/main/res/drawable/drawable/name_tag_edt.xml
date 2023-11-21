@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/ic_name_tag"
+        android:width="@dimen/_25sdp"
+        android:end="@dimen/_8sdp"
+        android:height="@dimen/_25sdp"
+        />
+
+</layer-list >

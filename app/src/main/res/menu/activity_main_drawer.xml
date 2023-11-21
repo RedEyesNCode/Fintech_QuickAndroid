@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" >
+    </item>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_account_box_24"
+        android:title="Profile" >
+    </item>
+    <item
+        android:id="@+id/kyc"
+        android:icon="@drawable/baseline_fingerprint_24"
+        android:title="Kyc" >
+    </item>
+    <item
+        android:id="@+id/bank_account"
+        android:icon="@drawable/baseline_currency_rupee_24"
+        android:title="Bank Account" >
+    </item>
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/baseline_play_arrow_24"
+        android:title="Help" >
+    </item>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="Logout" >
+    </item>
+</menu>

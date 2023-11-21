@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SignupActivity">
+    <include
+        android:id="@+id/toolBar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        layout="@layout/common_toolbar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_signin_vector"
+        android:layout_below="@id/toolBar"
+        android:id="@+id/vector"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/_200sdp"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/vector"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    style="@style/editTextNormal"
+                    android:id="@+id/edtName"
+                    android:imeOptions="actionDone"
+
+                    android:hint="Enter Your Name"
+                    android:maxLength="10"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="@color/grey"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    style="@style/editTextNormal"
+                    android:id="@+id/edtGender"
+                    android:hint="Select Gender"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+
+                    android:textColorHint="@color/grey"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    style="@style/editTextNormal"
+                    android:id="@+id/edtMobileNumber"
+                    android:hint="Enter Your Number"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+
+                    android:textColorHint="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    style="@style/editTextNormal"
+                    android:id="@+id/edtEmail"
+                    android:hint="Enter Your Email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/grey"
+                    android:imeOptions="actionDone"
+
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    style="@style/editTextNormal"
+                    android:id="@+id/edtPassword"
+                    android:hint="Enter your password"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/grey"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnRegister"
+                    style="@style/buttonGreen"
+                    android:text="Create New Account !"
+                    android:textAllCaps="false"
+
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

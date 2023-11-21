@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawerLayout"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DashboardActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipeRefresh"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/appBarDashboard"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:titleTextColor="@color/white"
+                        app:menu="@menu/toolbar_menu"
+                        android:background="@color/blue3_dashboard"
+                        app:navigationIcon="@drawable/baseline_menu_24"
+                        app:title="@string/app_name" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        app:cardBackgroundColor="@color/green_btn"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_5sdp"
+                        android:id="@+id/cardKycStatus"
+                        android:layout_margin="@dimen/_10sdp"
+
+                        android:layout_height="@dimen/_55sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/tvKycStatusApproved"
+                            style="@style/BigTextView"
+                            android:textColor="@color/white"
+                            android:text="APPROVED"
+                            android:gravity="center"
+
+                            android:layout_height="wrap_content"/>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        android:id="@+id/cardKycApply"
+                        app:cardElevation="@dimen/_5sdp"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                style="@style/normalTextView"
+                                android:textColor="@color/black"
+                                android:text="User Verification"
+
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/black"
+                                android:text="User Verification"
+                                android:id="@+id/tvKycStatus"
+
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:background="@color/grey2"
+                                android:layout_marginTop="@dimen/_8sdp"
+
+                                android:layout_height="@dimen/_2sdp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:src="@drawable/ic_apply_kyc_vector"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="@dimen/_100sdp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="@dimen/_12sdp"
+                                    android:background="@drawable/background_green_button"
+                                    style="@style/normalTextView"
+                                    android:layout_weight="0.3"
+                                    android:gravity="center"
+
+                                    android:textColor="@color/white"
+
+                                    android:text="Apply KYC"
+                                    android:layout_height="match_parent"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/recvLoanPackages"
+                        tools:listitem="@layout/item_loan_package"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navView"
+        app:headerLayout="@layout/nav_header_dashboard"
+        app:menu="@menu/activity_main_drawer"
+        android:layout_height="match_parent">
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

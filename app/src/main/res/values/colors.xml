@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="nav_blue">#007469</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#536DFE</color>
+    <color name="blue1_dashboard">#DAE7FF</color>
+    <color name="blue2_dashboard">#7DA0FA</color>
+    <color name="blue3_dashboard">#4747A1</color>
+    <color name="blue4_dashboard">#7978E9</color>
+    <color name="pink_dashboard">#F3797E</color>
+
+    <color name="green_btn">#3B873D</color>
+    <color name="green_btn_trans">#CE3B873D</color>
+    <color name="violet_btn">#762084</color>
+    <color name="red_btn">#BD342A</color>
+    <color name="red_btn_trans">#BCCC3A30</color>
+    <color name="yellow">#FFD740</color>
+    <color name="yellow1">#FFC107</color>
+    <color name="transparent_real">#00ffffff</color>
+    <color name="grey">#61615B</color>
+    <color name="grey2">#E1E1DE</color>
+    <color name="orange">#DC874D</color>
+</resources>

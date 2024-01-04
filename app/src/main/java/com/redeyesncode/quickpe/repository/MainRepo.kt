@@ -4,6 +4,7 @@ import com.redeyesncode.dateme.base.Resource
 import com.redeyesncode.quickpe.data.BodyRegisterUser
 import com.redeyesncode.quickpe.data.BodyUpdateKyc
 import com.redeyesncode.quickpe.data.CommonStatusMessageResponse
+import com.redeyesncode.quickpe.data.ResponseApiTest
 import com.redeyesncode.quickpe.data.ResponseKycDetails
 import com.redeyesncode.quickpe.data.ResponseLoginUser
 import com.redeyesncode.quickpe.data.ResponseRegisterUser
@@ -20,5 +21,8 @@ interface MainRepo {
     suspend fun getKycDetails( loginMap:HashMap<String,String>):Resource<ResponseKycDetails>
 
     suspend fun uploadFile( file:MultipartBody.Part):Resource<CommonStatusMessageResponse>
+
+    suspend fun apiTest():Resource<ResponseApiTest>
+
 
 }

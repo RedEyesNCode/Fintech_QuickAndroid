@@ -10,7 +10,9 @@ open class RetrofitInstance {
 
     companion object {
 //        val BASE_URL = "http://192.168.1.32:4444/"
-        val BASE_URL = "http://192.168.29.247:4444/"
+//        val BASE_URL = "http://192.168.29.247:4444/"
+        val BASE_URL = "http://3.109.46.48:4444/"
+        val TEST_URL = "https://ruparnatechnology.com/"
 
 
         private val retrofit by lazy {
@@ -20,7 +22,7 @@ open class RetrofitInstance {
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .addInterceptor(logging).build()
 
-            Retrofit.Builder().baseUrl(BASE_URL)
+            Retrofit.Builder().baseUrl(TEST_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client).build()
 

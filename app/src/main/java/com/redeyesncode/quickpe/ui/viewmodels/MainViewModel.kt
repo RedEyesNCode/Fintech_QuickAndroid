@@ -10,6 +10,7 @@ import com.redeyesncode.dateme.base.Resource
 import com.redeyesncode.quickpe.data.BodyRegisterUser
 import com.redeyesncode.quickpe.data.BodyUpdateKyc
 import com.redeyesncode.quickpe.data.CommonStatusMessageResponse
+import com.redeyesncode.quickpe.data.ResponseApiTest
 import com.redeyesncode.quickpe.data.ResponseKycDetails
 import com.redeyesncode.quickpe.data.ResponseLoginUser
 import com.redeyesncode.quickpe.data.ResponseRegisterUser
@@ -35,6 +36,18 @@ class MainViewModel(val app: Application,
     val uploadImageResponse : LiveData<Event<Resource<CommonStatusMessageResponse>>> = _uploadImageResponse
 
 
+    private val _apiTestResponse = MutableLiveData<Event<Resource<ResponseApiTest>>>()
+    val apiTestResponse : LiveData<Event<Resource<ResponseApiTest>>> = _apiTestResponse
+
+    fun apiTest(){
+        _uploadImageResponse.postValue(Event(Resource.Loading()))
+        viewModelScope.launch(Dispatchers.Main) {
+            val result = repos.apiTest()
+            _apiTestResponse.postValue(Event(result))
+        }
+
+
+    }
 
     fun uploadFile(file:MultipartBody.Part){
         _uploadImageResponse.postValue(Event(Resource.Loading()))

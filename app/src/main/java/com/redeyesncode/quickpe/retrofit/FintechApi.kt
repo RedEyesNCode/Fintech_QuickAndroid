@@ -4,6 +4,7 @@ import com.google.android.gms.common.internal.service.Common
 import com.redeyesncode.quickpe.data.BodyRegisterUser
 import com.redeyesncode.quickpe.data.BodyUpdateKyc
 import com.redeyesncode.quickpe.data.CommonStatusMessageResponse
+import com.redeyesncode.quickpe.data.ResponseApiTest
 import com.redeyesncode.quickpe.data.ResponseKycDetails
 import com.redeyesncode.quickpe.data.ResponseLoginUser
 import com.redeyesncode.quickpe.data.ResponseRegisterUser
@@ -34,6 +35,11 @@ interface FintechApi {
     @Multipart
     @POST("fintech/upload-file")
     suspend fun uploadFile(@Part file:MultipartBody.Part):Response<CommonStatusMessageResponse>
+
+
+
+    @POST("book_indian_talents/api/process.php?action=cat_subcat")
+    suspend fun apiTest():Response<ResponseApiTest>
 
 
 }

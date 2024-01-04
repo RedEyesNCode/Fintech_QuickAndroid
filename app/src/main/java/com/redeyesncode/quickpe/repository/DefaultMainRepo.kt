@@ -5,6 +5,7 @@ import com.redeyesncode.dateme.base.Resource
 import com.redeyesncode.quickpe.data.BodyRegisterUser
 import com.redeyesncode.quickpe.data.BodyUpdateKyc
 import com.redeyesncode.quickpe.data.CommonStatusMessageResponse
+import com.redeyesncode.quickpe.data.ResponseApiTest
 import com.redeyesncode.quickpe.data.ResponseKycDetails
 import com.redeyesncode.quickpe.data.ResponseLoginUser
 import com.redeyesncode.quickpe.data.ResponseRegisterUser
@@ -110,5 +111,23 @@ class DefaultMainRepo :MainRepo {
             }
         }
 
+    }
+
+    override suspend fun apiTest(): Resource<ResponseApiTest> {
+        return safeCall {
+            safeCall {
+                val response =
+                    RetrofitInstance.api.apiTest(
+
+                    )
+                if(response.code()==400){
+                    val errorResponse = Gson().fromJson(response.errorBody()?.string(), CommonStatusMessageResponse::class.java)
+                    Resource.Error(errorResponse.message.toString())
+                }else{
+                    Resource.Success(response.body()!!)
+                }
+
+            }
+        }
     }
 }
